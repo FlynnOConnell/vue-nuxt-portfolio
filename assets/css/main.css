@@ -2,17 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* img {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+} */
+
+/* #737373 */
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
   }
   
   .site-logo {
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: var(--text);
-    text-decoration: none;
-    height: 55px;
+    height: auto;
+    width: auto;
   }
   
   header {
@@ -112,7 +120,7 @@ body {
   
   .home-intro {
     padding: 50vh 0;
-    background: #123 url(//unsplash.it/900);
+    background: linear-gradient(180deg, #000000 0%, #737373 100%);
     background-size: cover;
     background-blend-mode: multiply;
     color: white;
@@ -123,6 +131,14 @@ body {
     padding: 4em 0;
     max-width: 900px;
     margin: 0 auto;
+  }
+
+  .grad-top {
+    background: linear-gradient(180deg, #737373 0%, #000000 100%);
+  }
+
+  .grad-fill {
+    background: linear-gradient(180deg, #737373 0%, #737373 100%);
   }
   
   .columns {
