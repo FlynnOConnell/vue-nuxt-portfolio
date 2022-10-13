@@ -12,6 +12,7 @@ body {
     font-size: 1.5rem;
     color: var(--text);
     text-decoration: none;
+    height: 55px;
   }
   
   header {
@@ -26,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 55px;
     padding: 2em 3em;
     transition: background 250ms ease-in;
     background: var(--background);
@@ -48,7 +50,7 @@ body {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.9rem;
+    font-size: 1.5vh;
   }
   
   .nav__link:after {

@@ -1,20 +1,20 @@
 <template>
   <div>
     <topheader />
-    <primary />
+    <!-- <primary /> -->
     <Nuxt />
   </div>
 </template>
 
 <script>
 import  topheader from '../components/topheader.vue'
-import  primary from '../components/primary.vue'
+// import  primary from '../components/primary.vue'
 
 
 export default {
   components: {
     topheader,
-    primary,
+    // primary,
   }
 };
 </script>

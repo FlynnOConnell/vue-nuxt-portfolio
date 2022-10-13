@@ -1,11 +1,13 @@
 <template>
 	<div>
 		<div
-			class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
+			class="home-intro relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
 		>
+			
 			<link
 				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-				rel="stylesheet"/>
+				rel="stylesheet"
+			/>
 			<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 				<div class="overflow-hidden shadow sm:rounded-lg p-6">
 					<h2 class="text-2xl leading-7 font-bold">
@@ -23,13 +25,15 @@
 							href="https://nuxtjs.org"
 							target="_blank"
 							class="button--doc text-orange-500 hover:underline"
-							> data-analyst</a
-						>, 
+						>
+							data-analyst</a
+						>,
 						<a
 							href="https://nuxtjs.org"
 							target="_blank"
 							class="button--doc text-gray-900 hover:underline"
-							> software developer</a
+						>
+							software developer</a
 						>.
 					</p>
 				</div>
@@ -38,9 +42,6 @@
 		<div
 			class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
 		>
-			<link
-				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-				rel="stylesheet"/>
 			<div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 				<div class="overflow-hidden shadow sm:rounded-lg p-6">
 					<h2 class="text-2xl leading-7 font-bold">
@@ -58,21 +59,21 @@
 							href="https://nuxtjs.org"
 							target="_blank"
 							class="button--doc text-orange-500 hover:underline"
-							> data-analyst</a
-						>, 
+						>
+							data-analyst</a
+						>,
 						<a
 							href="https://nuxtjs.org"
 							target="_blank"
 							class="button--doc text-gray-900 hover:underline"
-							> software developer</a
+						>
+							software developer</a
 						>.
 					</p>
 				</div>
 			</div>
 		</div>
-
 	</div>
-	
 </template>
 
 <script>
@@ -89,12 +90,15 @@ export default {
 			],
 			script: [
 				{
-				src: "observer.js",
-				body: true,
-				}
-			]
+					src: "observer.js",
+					body: true,
+				},
+				{
+					src: "helpers.js",
+					body: true,
+				},
+			],
 		};
 	},
 };
 </script>
-

@@ -13,15 +13,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      {rel: 'stylesheet', href: "https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"},
     ],
+    script: [
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/colors.css',
     "@/assets/css/main.css",
-    '@/assets/scss/main.scss'
+    // '@/assets/scss/main.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
