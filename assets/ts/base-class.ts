@@ -1,7 +1,5 @@
 import { ILogger } from 'typescript-ilogger';
 import { LogHelper } from './log-helper';
-import { ObjectOperations } from './object-operations';
-import { Orchestrator } from './orchestrator';
 
 /**
  * Base class
@@ -17,15 +15,7 @@ export class BaseClass {
    */
   public LogHelper: LogHelper;
 
-  /**
-   * Object Operations
-   */
-  public ObjectOperations: ObjectOperations;
 
-  /**
-   * Orchestrator
-   */
-  public Orchestrator: Orchestrator;
 
   /**
    * Initialize new instance of BaseClass
@@ -36,8 +26,5 @@ export class BaseClass {
 
     this.LogHelper = new LogHelper(this.Logger);
 
-    this.ObjectOperations = new ObjectOperations();
-
-    this.Orchestrator = new Orchestrator(this.Logger);
   }
 }

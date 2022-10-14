@@ -15,12 +15,4 @@ describe(`${BaseClass.name}`, () => {
     const baseClass = new BaseClass(logger);
     return expect(baseClass.LogHelper).toBeDefined();
   });
-  test('should create class and have object operations defined', () => {
-    const baseClass = new BaseClass(logger);
-    return expect(baseClass.ObjectOperations).toBeDefined();
-  });
-  test('should create class and have orchestrator defined', () => {
-    const baseClass = new BaseClass(logger);
-    return expect(baseClass.Orchestrator).toBeDefined();
-  });
 });
