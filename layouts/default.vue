@@ -1,25 +1,25 @@
 <template>
-  <div>
+	<div>
+
     <topheader />
-    <!-- <primary /> -->
     <Nuxt />
-  </div>
+    <resume />
+		<bottomfooter />
+	</div>
 </template>
 
 <script>
-import  topheader from '../components/topheader.vue'
-// import  primary from '../components/primary.vue'
-
+import topheader from "../components/topheader.vue";
+import resume from "../components/resume.vue";
+import bottomfooter from "../components/bottomfooter.vue";
 
 export default {
-  components: {
-    topheader,
-    // primary,
-  }
+	components: {
+		topheader,
+		resume,
+		bottomfooter,
+	},
 };
 </script>
 
 
-<style lang="scss">
-
-</style>
