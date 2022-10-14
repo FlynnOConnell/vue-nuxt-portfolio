@@ -1,5 +1,5 @@
 const header = document.querySelector("header");
-const sectionOne = document.querySelector(".home-intro");
+const sectionOne = document.querySelector(".firstElObserver");
 const logo = document.querySelector(".dynamic-image");
 
 const sectionOneOptions = {
@@ -11,15 +11,14 @@ const sectionOneObserver = new IntersectionObserver(function (
 	sectionOneObserver
 ) {
 	entries.forEach((entry) => {
-
 		if (!entry.isIntersecting) {
 			header.classList.add("nav-scrolled");
-      logo.src = "./simple_black.svg";
+			logo.classList.remove("white");
 
 		} else {
+			// header.classList.remove("nav-scrolled");
 			header.classList.remove("nav-scrolled");
-      logo.src = "./simple_white.svg";
-
+			logo.classList.add("white");
 		}
 	});
 },
