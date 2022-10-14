@@ -14,20 +14,22 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
-    script: [
-    ]
+    // script: [
+    //   src= "https://kit.fontawesome.com/e0a01fad4b.js",
+    //   head = true,
+    //   crossorigin="anonymous"
+    // ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/colors.css',
     "@/assets/css/main.css",
-    // '@/assets/scss/main.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '~/plugins/observer.js'
+    { src: '~/plugins/vue-scroll-reveal', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
