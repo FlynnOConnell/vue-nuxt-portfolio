@@ -1,5 +1,5 @@
 const header = document.querySelector("header");
-const sectionOne = document.querySelector(".firstElObserver");
+const sectionOne = document.querySelector(".cutoff");
 const logo = document.querySelector(".dynamic-image");
 
 const sectionOneOptions = {

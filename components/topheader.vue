@@ -1,24 +1,31 @@
 <template>
-	<header id="header" class="transition">
-		<a href="#" class="site-logo text-bold" aria-label="homepage">
-			<div class="image-container transition">
-				<embed class="dynamic-image white transition" src="../static/signature_black.svg"/>
-			</div>
-		</a>
+	<!-- START HEADER -->
+	<header id="header" class="transition header-fixed">
+		<div class="header-limiter">
+			<!-- Signature Logo with attached JS -->
+			<a href="#" class="site-logo" aria-label="homepage">
+				<div class="image-container transition flex justify-center">
+					<embed
+						class="dynamic-image white transition"
+						src="../static/signature_black.svg"
+					/>
+				</div>
+			</a>
 
-		<nav class="main-nav">
-			<ul id="dynamic-node" class="nav__list">
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Home</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Projects</a>
-				</li>
-				<li class="nav__list-item">
-					<a href="#" class="nav__link">Resume</a>
-				</li>
-			</ul>
-		</nav>
+			<nav class="main-nav">
+				<ul id="dynamic-node" class="nav__list">
+					<li class="nav__list-item">
+						<a href="#" class="nav__link">Home</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#" class="nav__link">Projects</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#" class="nav__link">Resume</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 </template>
 
@@ -29,16 +36,27 @@ export default {
 </script>
 
 <style scoped>
-
 .white {
-  filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
 }
 
 .dynamic-image {
+	flex: 1;
 	height: auto;
 	width: auto;
 }
 
+.header-limiter {
+	padding-top: 5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
 
 header {
 	--text: #f4f4f4;
@@ -50,8 +68,7 @@ header {
 	z-index: 999;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	height: 55px;
+	height: 20vh;
 	padding: 2em 3em;
 	transition: background 250ms ease-in;
 	background: transparent;
@@ -128,21 +145,20 @@ header {
 }
 
 .background-show {
-  transition: background 1000ms ease-in;
-  background-color:rgb(255, 255, 255)
+	transition: background 1000ms ease-in;
+	background-color: rgb(255, 255, 255);
 }
 
 .nav-scrolled {
 	--text: rgb(0, 0, 0);
 	--text-inverse: #f4f4f4;
 	--background: transparent;
-
 }
 
 .transition {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition:all 1s ease-in-out;
-  -o-transition:all 1s ease-in-out;
-  transition:all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 </style>

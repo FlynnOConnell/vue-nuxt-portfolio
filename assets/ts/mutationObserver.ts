@@ -4,8 +4,6 @@ interface observerOptions {
   [key: string]: boolean;
 }
 
-
-
 // Callback function to execute when mutations are observed-
 const callback = (observer: any) => {
   console.log(observer)

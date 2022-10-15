@@ -2,51 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  padding: 2vh;
+  box-shadow: 0px 0px 40px -4px rgba(0, 0, 0, 0.58);
+	transition: 0.15s;
+} */
+/* .outer-container {
+  background: linear-gradient(180deg, #000000 10%, #f4f4f4 35%);
+} */
 
-  .home-intro {
-    padding: 50vh 0;
-    background: linear-gradient(180deg, #000000 10%, #f4f4f4 35%);
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: white;
-    text-align: center;
-  }
-  
-  .home-about {
-    padding: 4em 0;
-    max-width: 900px;
-    margin: 0 auto;
-  }
 
-  .grad-top {
-    background: linear-gradient(180deg, #f4f4f4 0%, #000000 100%);
-  }
+body {
+  background: linear-gradient(180deg, #000000 10%, #f4f4f4 35%);
+}
 
-  .grad-fill {
-    background: #f4f4f4
-  }
-  
-  .columns {
-    display: flex;
-  }
-  
-  .col + .col {
-    margin-left: 1.5em;
-  }
-  
-  .more-stuff-grid {
-    background: #f4f4f4;
-    padding: 4em 0;
-    display: grid;
-    grid-gap: 2em;
-    align-items: center;
-    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em, 1fr);
-  }
-  
-  .from-left {
-    grid-column: 2 / 3;
-  }
-  
-  .from-right {
-    grid-column: 3 / 4;
-  }
+section {
+  min-height: 20px;
+}
+
+.header-fixed {
+
+	padding: 20px 40px;
+	height: 80px;
+	box-sizing: border-box;
+	top: -100px;
+	-webkit-transition: top 0.3s;
+	transition: top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder {
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+/* The navigation links */
+
+
+
+.header-fixed .header-limiter nav a:hover {
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float: none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+}
+
+
+
+.more-stuff-grid {
+	background: #f4f4f4;
+	padding: 4em 0;
+	display: grid;
+	grid-gap: 2em;
+	align-items: center;
+	grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+			1em,
+			1fr
+		);
+}
+
+.from-left {
+	grid-column: 2 / 3;
+}
+
+.from-right {
+	grid-column: 3 / 4;
+}
