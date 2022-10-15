@@ -11,7 +11,7 @@
 				>
 					<span id="dev_span"> Developer </span>
 					<label class="switch">
-						<input type="checkbox" />
+						<input id="resume-checkbox" type="checkbox" checked/>
 						<span class="slider"></span>
 					</label>
 					<span id="ds_span"> Data Scientist </span>
@@ -20,8 +20,7 @@
 					<img
 						id="resume"
 						src="../static/images/Resume_dev.png"
-						alt="Resume-Software"
-					/>
+						alt="Resume-Software"/>
 					<img
 						id="resume2"
 						class="hide-this"
@@ -42,6 +41,8 @@ export default {
 		});
 	},
 };
+
+
 </script>
 
 <style scoped>

@@ -37,6 +37,10 @@ export default {
 					src: "/js/observer.js",
 					body: true,
 				},
+				{
+					src: "/js/responsive.js",
+					body: true,
+				},
 			],
 		};
 	},

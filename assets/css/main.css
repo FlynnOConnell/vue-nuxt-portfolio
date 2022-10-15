@@ -20,6 +20,10 @@ section {
   min-height: 20px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .header-fixed {
 
 	padding: 20px 40px;
