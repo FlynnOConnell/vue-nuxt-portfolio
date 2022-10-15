@@ -5119,9 +5119,9 @@ num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
 
-nuxt@^2.12.2:
+nuxt@^2.15.8:
   version "2.15.8"
-  resolved "https://registry.npmjs.org/nuxt/-/nuxt-2.15.8.tgz"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.8.tgz#946cba46bdaaf0e3918aa27fd9ea0fed8ed303b0"
   dependencies:
     "@nuxt/babel-preset-app" "2.15.8"
     "@nuxt/builder" "2.15.8"
