@@ -9,8 +9,9 @@
 </template>
 
 <style>
+
 .outer-container {
-	margin: 2vh;
+	margin: 5vh;
 	box-shadow: 0px 0px 80px 54px #545454;
 }
 

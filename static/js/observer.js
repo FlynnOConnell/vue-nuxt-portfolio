@@ -1,10 +1,6 @@
-const header = document.querySelector("header");
 const sectionOne = document.querySelector(".cutoff");
+const header = document.querySelector("header");
 const logo = document.querySelector(".dynamic-image");
-
-const sectionOneOptions = {
-	rootMargin: "-200px 0px 0px 0px",
-};
 
 const sectionOneObserver = new IntersectionObserver(function (
 	entries,
@@ -14,14 +10,12 @@ const sectionOneObserver = new IntersectionObserver(function (
 		if (!entry.isIntersecting) {
 			header.classList.add("nav-scrolled");
 			logo.classList.remove("white");
-
 		} else {
 			// header.classList.remove("nav-scrolled");
 			header.classList.remove("nav-scrolled");
 			logo.classList.add("white");
 		}
 	});
-},
-sectionOneOptions);
+});
 
 sectionOneObserver.observe(sectionOne);

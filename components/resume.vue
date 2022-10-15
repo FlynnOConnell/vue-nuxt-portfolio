@@ -1,5 +1,6 @@
 <template>
 	<section id="resume-section" class="m-8 border-2">
+		<a href="#resumelink"></a>
 		<div class="wrapper flex flex-col ">
 
 				<h2 class="center" style="text-align: center">
@@ -11,7 +12,7 @@
 				>
 					<span id="dev_span"> Developer </span>
 					<label class="switch">
-						<input id="resume-checkbox" type="checkbox" checked/>
+						<input id="resume-checkbox" type="checkbox" onchange="checkAddress(this)"/>
 						<span class="slider"></span>
 					</label>
 					<span id="ds_span"> Data Scientist </span>
@@ -23,7 +24,7 @@
 						alt="Resume-Software"/>
 					<img
 						id="resume2"
-						class="hide-this"
+						class="hidden"
 						src="../static/images/Resume_data.png"
 						alt="Resume-Data"
 					/>
@@ -46,6 +47,10 @@ export default {
 </script>
 
 <style scoped>
+#resume-section {
+	max-width: 2550px;
+}
+
 
 .wrapper {
   
@@ -133,7 +138,8 @@ input:hover:checked + .slider:before {
 	box-shadow: 0 0.3em 0 var(--outline_color);
 }
 
-[id^="resume"] {
+[id^="resume"], 
+[id^="resume2"] {
 	position: relative;
 	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3),
 		0 0 60px rgba(0, 0, 0, 0.1) inset;
@@ -142,7 +148,8 @@ input:hover:checked + .slider:before {
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
 }
 
-[id^="resume"] {
+[id^="resume"],
+ [id^="resume2"] {
 	position: relative;
 	top: 10px;
 	height: auto;
@@ -152,7 +159,9 @@ input:hover:checked + .slider:before {
 }
 
 [id^="resume"]:before,
-[id^="resume"]:after {
+[id^="resume"]:after,
+[id^="resume2"]:before,
+[id^="resume2"]:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -166,7 +175,9 @@ input:hover:checked + .slider:before {
 	-moz-border-radius: 100px / 10px;
 	border-radius: 100px / 10px;
 }
-[id^="resume"]:after {
+
+[id^="resume"]:after,
+[id^="resume2"]:after {
 	right: 10px;
 	left: auto;
 	-webkit-transform: skew(8deg) rotate(3deg);
@@ -176,7 +187,4 @@ input:hover:checked + .slider:before {
 	transform: skew(8deg) rotate(3deg);
 }
 
-.hide-this {
-	display: none !important;
-}
 </style>

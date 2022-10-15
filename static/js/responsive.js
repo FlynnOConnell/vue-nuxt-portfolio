@@ -3,28 +3,29 @@
 function checkAddress(checkbox) {
 
     let myImg = document.getElementById("resume")
+    let hiddenImg = document.getElementById("resume2")
     if (checkbox.checked) {
         myImg.classList.add('hidden');
-        console.log("hidden added")
+        hiddenImg.classList.remove('hidden');
+        
     } else {
         myImg.classList.remove('hidden')
-        console.log("hidden unadded")
+        hiddenImg.classList.add('hidden');
+       
     }
 }
 
+function scrollTo(element, to, duration) {
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
 
-function resumeChanger() {
-    let active = $(this)
-    let img
-    if(active.attr("id") === "button-dev"){
-        img = $("#resume")
-        $("#resume2").addClass("hide-this")
-        img.removeClass("hide-this")
-    }
-    else {
-        img = $("#resume2")
-        $("#resume").addClass("hide-this")
-        img.removeClass("hide-this")
-     }
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
 }
+
+
 

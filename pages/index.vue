@@ -41,6 +41,13 @@ export default {
 					src: "/js/responsive.js",
 					body: true,
 				},
+				{
+					src:"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+				},
+				{
+					src:"/js/stickyscroll.js",
+					body: true,
+				}
 			],
 		};
 	},

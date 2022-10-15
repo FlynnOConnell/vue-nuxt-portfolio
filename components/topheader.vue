@@ -1,31 +1,30 @@
 <template>
 	<!-- START HEADER -->
-	<header id="header" class="transition header-fixed">
-		<div class="header-limiter">
-			<!-- Signature Logo with attached JS -->
-			<a href="#" class="site-logo" aria-label="homepage">
-				<div class="image-container transition flex justify-center">
-					<embed
-						class="dynamic-image white transition"
-						src="../static/signature_black.svg"
-					/>
-				</div>
-			</a>
+	<header  id="header" class="transition header-fixed">
+			<div class="header-limiter">
+				<a href="#" class="site-logo" aria-label="homepage">
+					<div class="image-container transition flex justify-center">
+						<embed
+							class="dynamic-image white transition"
+							src="../static/signature_black.svg"
+						/>
+					</div>
+				</a>
 
-			<nav class="main-nav">
-				<ul id="dynamic-node" class="nav__list">
-					<li class="nav__list-item">
-						<a href="#" class="nav__link">Home</a>
-					</li>
-					<li class="nav__list-item">
-						<a href="#" class="nav__link">Projects</a>
-					</li>
-					<li class="nav__list-item">
-						<a href="#" class="nav__link">Resume</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
+				<nav class="main-nav">
+					<ul id="dynamic-node" class="nav__list">
+						<li class="nav__list-item">
+							<a href="#" class="nav__link">Home</a>
+						</li>
+						<li class="nav__list-item">
+							<a href="#" class="nav__link">Projects</a>
+						</li>
+						<li class="nav__list-item">
+							<a href="#resumelink" class="nav__link">Resume</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 	</header>
 </template>
 
