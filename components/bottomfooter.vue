@@ -22,11 +22,6 @@
 <script>
 export default {
 	name: "bottomfooter",
-	methods: {
-		scrollToTop() {
-			window.scrollTo(0, 0);
-		},
-	},
 };
 </script>
 
@@ -37,7 +32,8 @@ footer {
 	align-items: baseline;
 	position: relative;
 	height: 90px;
-	padding: 20hv;
+	width: 90vh;
+	padding: 10hv;
 }
 
 .top-link {

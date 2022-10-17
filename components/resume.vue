@@ -24,7 +24,7 @@
 			</div>
 			<div id="myresume" class="" style="padding: 20px">
 				<img
-					class="resumeclass"
+					class="resumeclass resumeshadow"
 					id="resume"
 					src="../static/images/Resume_dev.png"
 					alt="Resume-Software"
@@ -193,18 +193,18 @@ input:hover:checked + .slider:before {
 .resumeshadow
 {
     position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
 }
 .resumeshadow:before, .resumeshadow:after
 {
   content:"";
     position:absolute;
     z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -webkit-box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
     top:10px;
     bottom:10px;
     left:0;

@@ -35,6 +35,7 @@ export default {
 	plugins: [
 		{
 			src: "~/plugins/fontawesome.js",
+			mode: 'client',
 		},
 	],
 
@@ -46,6 +47,7 @@ export default {
 		"@nuxt/typescript-build",
 		"@nuxt/postcss8",
 		"@nuxtjs/style-resources",
+		'@nuxtjs/fontawesome'
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [],
@@ -59,4 +61,11 @@ export default {
 			},
 		},
 	},
+
+	fontawesome: {
+		icons: {
+		 solid:true,
+		 brands:true
+		}
+	   }
 };

@@ -1,7 +1,7 @@
 <template>
 	<!-- START HEADER -->
-	<header id="header" class="transition header-fixed">
-		
+	
+		<header id="header" class="transition header-fixed">
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">
 					<div class="image-container transition flex justify-center">
@@ -18,16 +18,17 @@
 							<a href="#" class="nav__link">Home</a>
 						</li>
 						<li class="nav__list-item">
-							<a href="#" class="nav__link">Projects</a>
+							<a href="#" class="nav__link"> Projects </a>
 						</li>
 						<li class="nav__list-item">
-							<a href="#resumelink" class="nav__link">Resume</a>
+							<a href="#resumelink" class="nav__link"> Resume </a>
 						</li>
 					</ul>
 				</nav>
-				</div>
+			</div>
+		</header>
 		
-	</header>
+	
 </template>
 
 <script>
@@ -40,6 +41,8 @@ export default {
 .white {
 	filter: brightness(0) invert(1);
 }
+
+
 
 .main-nav {
 	display: flex;
