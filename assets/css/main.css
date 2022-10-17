@@ -11,6 +11,11 @@
 	--myoutline: #89938f;
 }
 
+html {scroll-behavior: smooth;}
+h1, h2, h3 {margin: 0;}
+h2, h3, p { margin-bottom: 1em;}
+img {display: block; max-width: 100%;}
+
 .border {
 	border: 4px outset rgba(137, 147, 143, 0.72);
 	border-radius: 12px;
@@ -38,14 +43,6 @@
 
 .on-primary-2 {
 	background-color: #324b47;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-section {
-	min-height: 20px;
 }
 
 .more-stuff-grid {

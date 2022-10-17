@@ -1,7 +1,9 @@
 <template>
-	<section id="resume-section" class="m-8 flex items-center justify-center">
+	<section class="m-8 flex items-center justify-center">
 		<a href="#resumelink"></a>
-		<div class="wrapper flex flex-col justify-center items-center bg-1 border">
+		<div
+			class="wrapper flex flex-col justify-center items-center bg-1 border"
+		>
 			<h2 class="flex justify-center center cursive text-white">
 				My Resume
 				<hr />
@@ -18,11 +20,9 @@
 					/>
 					<span class="slider"></span>
 				</label>
-				<span id="ds_span" class="text-white">
-					 Data Scientist 
-					</span>
+				<span id="ds_span" class="text-white"> Data Scientist </span>
 			</div>
-			<div id="myresume" class="" style="padding: 20px">
+			<div id="myresume" class="" style="padding: 1rem">
 				<img
 					class="resumeclass resumeshadow"
 					id="resume"
@@ -31,7 +31,7 @@
 				/>
 				<img
 					id="resume2"
-					class="resumeclass hidden"
+					class="resumeclass resumeshadow hidden"
 					src="../static/images/Resume_data.png"
 					alt="Resume-Data"
 				/>
@@ -52,26 +52,16 @@ export default {
 </script>
 
 <style scoped>
-.cursive {
-	font-family: "Monotype Corsiva", "Apple Chancery", "ITC Zapf Chancery",
-		"URW Chancery L", cursive;
-}
-
-#resume-section {
-	width: 600px;
-	overflow: auto;
-}
 
 div#resume {
-	width: calc(100% - 40px);
+	width: calc(100vh - 40px);
 	min-height: 40px;
 	margin-left: 20px;
 	margin-right: 20px;
-
 }
 
 .wrapper {
-	width: auto;
+	width: calc(100% - 5px);
 	height: auto;
 }
 
@@ -189,39 +179,69 @@ input:hover:checked + .slider:before {
 	transform: skew(8deg) rotate(3deg);
 }
 
-
-.resumeshadow
-{
-    position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
+.resumeshadow {
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.491),
+		0 0 40px rgba(0, 0, 0, 0.491);
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.491),
+		0 0 40px rgba(0, 0, 0, 0.491);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.491), 0 0 40px rgba(0, 0, 0, 0.491);
 }
-.resumeshadow:before, .resumeshadow:after
-{
-  content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
-    box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
-    top:10px;
-    bottom:10px;
-    left:0;
-    right:0;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
+.resumeshadow:before,
+.resumeshadow:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	top: 10px;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	-moz-border-radius: 100px / 10px;
+	border-radius: 100px / 10px;
 }
-.resumeshadow:after
-{
-  right:10px;
-    left:auto;
-    -webkit-transform:skew(8deg) rotate(3deg);
-       -moz-transform:skew(8deg) rotate(3deg);
-        -ms-transform:skew(8deg) rotate(3deg);
-         -o-transform:skew(8deg) rotate(3deg);
-            transform:skew(8deg) rotate(3deg);
+.resumeshadow:after {
+	right: 10px;
+	left: auto;
+	-webkit-transform: skew(8deg) rotate(3deg);
+	-moz-transform: skew(8deg) rotate(3deg);
+	-ms-transform: skew(8deg) rotate(3deg);
+	-o-transform: skew(8deg) rotate(3deg);
+	transform: skew(8deg) rotate(3deg);
 }
 
+.cursive {
+	font-family: "Monotype Corsiva", "Apple Chancery", "ITC Zapf Chancery",
+		"URW Chancery L", cursive;
+}
 
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
 </style>

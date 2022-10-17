@@ -42,8 +42,6 @@ export default {
 	filter: brightness(0) invert(1);
 }
 
-
-
 .main-nav {
 	display: flex;
 	align-items: center;

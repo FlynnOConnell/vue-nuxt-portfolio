@@ -1,21 +1,34 @@
 <template>
-	<div class="all bg-2 flex flex-col items-center justify-center shrink-1">
+	<div class="bg-2 flex flex-col justify-center items-center">
 		<a href="#"></a>
 		<appheader />
 		<hr class="style-two" />
-		<links />
+		<div class="container">
+			<links />
+		</div>
 		<div class="spacer"></div>
-		<resume />
-		<Nuxt />
+		<div class="container">
+			<resume />
+		</div>
+		<div class="container">
+			<Nuxt />
+		</div>
 		<div class="spacer"></div>
-		<bottomfooter />
+		<div class="container">
+			<bottomfooter />
+		</div>
 	</div>
 </template>
 
 <style>
-
+/* globals .all substitute for body! */
 .all {
-	overflow: none;
+	margin: 0;
+}
+
+.container {
+	padding: 0 1em;
+	max-width: 60rem;
 }
 
 hr.style-two {
@@ -29,9 +42,7 @@ hr.style-two {
 .spacer {
 	height: 10vh;
 }
-
 </style>
-
 
 <script>
 import appheader from "~/components/appheader.vue";

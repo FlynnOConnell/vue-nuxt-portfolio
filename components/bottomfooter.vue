@@ -31,8 +31,8 @@ footer {
 	justify-content: space-around;
 	align-items: baseline;
 	position: relative;
-	height: 90px;
-	width: 90vh;
+	height: auto;
+	width: auto;
 	padding: 10hv;
 }
 
