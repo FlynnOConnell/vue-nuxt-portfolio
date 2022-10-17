@@ -1,26 +1,10 @@
 <template>
-	<section id="index">
-		<div
-			class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0"
-		>
-			<!-- <link
-				href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-				rel="stylesheet"
-			/> -->
-			<!-- <div class="firstElObserver">
-				<div class="shadow sm:rounded-lg p-6">
-					<h2 class="text-2xl leading-7 font-bold">
-						<hr />
-					</h2>
-				</div>
-			</div> -->
-		</div>
-	</section>
+	<div class="all"></div>
 </template>
 
 <script>
 export default {
-	layout: "default",
+	layout: "layout_main",
 	head() {
 		return {
 			title: "Flynns Website",
@@ -34,22 +18,20 @@ export default {
 			],
 			script: [
 				{
-					src: "/js/observer.js",
-					body: true,
+					src: "./js/observer.js",
+					body: true
 				},
 				{
-					src: "/js/responsive.js",
-					body: true,
+					src: "./js/responsive.js",
+					body: true
 				},
-				{
-					src:"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-				},
-				{
-					src:"/js/stickyscroll.js",
-					body: true,
-				}
 			],
+			css: [{
+				src: "~/assets/css/colors.css"
+			}],
 		};
 	},
 };
 </script>
+
+<style></style>

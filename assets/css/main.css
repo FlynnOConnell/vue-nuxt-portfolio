@@ -2,121 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--mybg: #0000;
+	--myprimary: #00382d;
+	--mysecondary: #005143;
+	--mycont-2: #004f58;
+	--mycont-3: #005143;
+	--myoutline: #89938f;
+}
+
+.border {
+	border: 4px outset rgba(137, 147, 143, 0.72);
+	border-radius: 12px;
+}
+
+.bg-1 {
+	background-color: #3f4949;
+}
+
+.bg-2 {
+	background-color: #191c1b;
+}
+
+.primary-1 {
+	background-color: #003732;
+}
+
+.on-primary-1 {
+	background-color: #1c3531;
+}
+
+.primary-2 {
+	background-color: #005049
+}
+
+.on-primary-2 {
+	background-color: #324b47;
+}
 
 html {
 	scroll-behavior: smooth;
 }
 
-body {
-  background: linear-gradient(180deg, #000000 10%, #f4f4f4 35%);
-}
-
 section {
-  min-height: 20px;
+	min-height: 20px;
 }
-
-.hidden {
-  display: none !important;
-}
-
-.header-fixed {
-
-	padding: 20px 40px;
-	height: 80px;
-	box-sizing: border-box;
-	top: -100px;
-	-webkit-transition: top 0.3s;
-	transition: top 0.3s;
-}
-
-.header-fixed .header-limiter {
-	max-width: 1200px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-/*	The header placeholder. It is displayed when the header is fixed to the top of the
-	browser window, in order to prevent the content of the page from jumping up. */
-
-.header-fixed-placeholder {
-	height: 80px;
-	display: none;
-}
-
-/* Logo */
-
-.header-fixed .header-limiter h1 {
-	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-	line-height: 40px;
-	margin: 0;
-}
-
-/* The navigation links */
-
-
-
-.header-fixed .header-limiter nav a:hover {
-	opacity: 1;
-}
-
-/* Fixed version of the header */
-
-body.fixed .header-fixed {
-	padding: 10px 40px;
-	height: 50px;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-body.fixed .header-fixed-placeholder {
-	display: block;
-}
-
-body.fixed .header-fixed .header-limiter h1 {
-	font-size: 24px;
-	line-height: 30px;
-}
-
-body.fixed .header-fixed .header-limiter nav {
-	line-height: 28px;
-	font-size: 13px;
-}
-
-/* Making the header responsive */
-
-@media all and (max-width: 600px) {
-	.header-fixed {
-		padding: 20px 0;
-		height: 75px;
-	}
-
-	.header-fixed .header-limiter h1 {
-		float: none;
-		margin: -8px 0 10px;
-		text-align: center;
-		font-size: 24px;
-		line-height: 1;
-	}
-
-	.header-fixed .header-limiter nav {
-		line-height: 1;
-		float: none;
-	}
-
-	.header-fixed .header-limiter nav a {
-		font-size: 13px;
-	}
-
-	body.fixed .header-fixed {
-		display: none;
-	}
-}
-
-
 
 .more-stuff-grid {
 	background: #f4f4f4;

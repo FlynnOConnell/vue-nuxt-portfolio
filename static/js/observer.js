@@ -1,4 +1,4 @@
-const sectionOne = document.querySelector(".cutoff");
+const sectionOne = document.querySelector(".spacer");
 const header = document.querySelector("header");
 const logo = document.querySelector(".dynamic-image");
 

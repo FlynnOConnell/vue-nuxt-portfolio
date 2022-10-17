@@ -1,6 +1,7 @@
 <template>
 	<!-- START HEADER -->
-	<header  id="header" class="transition header-fixed">
+	<header id="header" class="transition header-fixed">
+		
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">
 					<div class="image-container transition flex justify-center">
@@ -11,7 +12,7 @@
 					</div>
 				</a>
 
-				<nav class="main-nav">
+				<nav class="main-nav justify-center pt-3">
 					<ul id="dynamic-node" class="nav__list">
 						<li class="nav__list-item">
 							<a href="#" class="nav__link">Home</a>
@@ -24,13 +25,14 @@
 						</li>
 					</ul>
 				</nav>
-			</div>
+				</div>
+		
 	</header>
 </template>
 
 <script>
 export default {
-	name: "topheader",
+	name: "appheader",
 };
 </script>
 
@@ -60,13 +62,13 @@ export default {
 header {
 	--text: #f4f4f4;
 	--text-inverse: #333;
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	height: 20vh;
 	padding: 2em 3em;
 	transition: background 250ms ease-in;
@@ -159,5 +161,39 @@ header {
 	-moz-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+}
+
+.tilecontainer.toggled {
+	animation: none;
+}
+
+.tilecontainer.toggled > #title {
+	opacity: 0;
+}
+
+.tilecontainer.toggled > #icon {
+	opacity: 1;
+}
+
+.tilecontainer.toggled > #tiles > .tile:hover {
+	opacity: 0.1 !important;
+}
+
+.centered {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#tiles {
+	height: calc(100vh - 1px);
+	width: calc(100vw - 1px);
+	position: relative;
+	z-index: 2;
+
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
 }
 </style>
