@@ -1,3 +1,4 @@
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
@@ -29,6 +30,7 @@ export default {
 		"~/assets/css/normalize.css",
 		"@/assets/css/main.css",
 		"@fortawesome/fontawesome-svg-core/styles.css",
+		"@/assets/css/fonts.css"
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -56,6 +58,8 @@ export default {
 	build: {
 		postcss: {
 			plugins: {
+				'postcss-import': {},
+				'tailwindcss/nesting': {},
 				tailwindcss: {},
 				autoprefixer: {},
 			},
@@ -64,8 +68,7 @@ export default {
 
 	fontawesome: {
 		icons: {
-		 solid:true,
-		 brands:true
+		 brands: ['faGithub', "faTwitter"]
 		}
 	   }
 };

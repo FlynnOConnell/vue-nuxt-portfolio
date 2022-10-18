@@ -25,7 +25,7 @@ window.onload = (event) => {
 				from: index,
 			}),
 		});
-
+ 
 		setTimeout(function() {
 			const outer = document.querySelector('.tilecontainer')
 			outer.classList.add('hidden')

@@ -11,7 +11,9 @@
 			<div
 				class="flex btn-group btn-group-toggle btn-sm btn-dark justify-center gap-4 pt-6"
 			>
-				<span id="dev_span" class="text-white"> Developer </span>
+				<span id="dev_span" class="text-white">
+					 Developer
+					 </span>
 				<label class="switch">
 					<input
 						id="resume-checkbox"
@@ -22,7 +24,10 @@
 				</label>
 				<span id="ds_span" class="text-white"> Data Scientist </span>
 			</div>
-			<div id="myresume" class="" style="padding: 1rem">
+			<div class="downloader">
+				<a href="#" class="buttonDownload">Download</a>
+			</div>
+			<div id="myresume" class="" style="padding: 0rem 1rem 1rem 1rem">
 				<img
 					class="resumeclass resumeshadow"
 					id="resume"
@@ -43,15 +48,119 @@
 <script>
 export default {
 	name: "resume",
+
+	methods: {
+		downloadMe() {
+			const link = document.createElement("a");
+			link.href = "/images/resume_dev.png";
+			link.download = "resume_dev.png";
+			link.target = "_blank";
+			link.click();
+		},
+	},
 	mounted: function () {
 		this.$nextTick(function () {
-			// console.log("header export mount test!!! tick tick tick!! ${this}");
+			console.log("header export mount test!!! tick tick tick!! ${this}");
 		});
 	},
 };
 </script>
 
 <style scoped>
+
+.downloader {
+	display: flex;
+	width: 100%;
+	height: auto;
+
+	padding-top: 2rem;
+	align-items: right;
+	padding-left: 1rem;
+}
+
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+  
+	background-color: #bec8c8;
+	color: white;
+	border-radius: 25px;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+}
+
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 1px;
+	margin-top: -7px;
+  
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #4CC713;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
 
 div#resume {
 	width: calc(100vh - 40px);
