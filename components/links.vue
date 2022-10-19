@@ -1,15 +1,3 @@
-<template>
-	<div class="links flex justify-center pt-12 gap-12">
-		<button @click="toGithub">
-			<font-awesome-icon :icon="['fab', 'github']" inverse size="2x" />
-		</button>
-                <button @click="toTwitter">
-			<font-awesome-icon :icon="['fab', 'twitter']" inverse size="2x" />
-		</button>
-		
-	</div>
-</template>
-
 <script>
 export default {
 	name: "links",
@@ -30,4 +18,19 @@ export default {
 };
 </script>
 
-<style scoped></style>
+
+<template>
+	<div class="links flex justify-center pt-12 gap-12">
+		<button @click="toGithub">
+			<font-awesome-icon :icon="['fab', 'github']" inverse size="2x" />
+		</button>
+                <button @click="toTwitter">
+			<font-awesome-icon :icon="['fab', 'twitter']" inverse size="2x" />
+		</button>
+		
+	</div>
+</template>
+
+
+<style scoped>
+</style>
