@@ -22,6 +22,10 @@ export default {
 				src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js",
 				body: true,
 			},
+			{
+				src: "https://cdn.jsdelivr.net/npm/vue-tippy@4/dist/vue-tippy.min.js",
+				client: true,
+			},
 		],
 	},
 
@@ -29,15 +33,23 @@ export default {
 	css: [
 		"~/assets/css/normalize.css",
 		"@/assets/css/main.css",
+		"@/assets/css/fonts.css",
 		"@fortawesome/fontawesome-svg-core/styles.css",
-		"@/assets/css/fonts.css"
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
 		{
+			src: "~/plugins/tooltip.js",
+			head: true,
+		},
+		{
+			src: "~/plugins/DownloadButton.js",
+			head: true,
+		},
+		{
 			src: "~/plugins/fontawesome.js",
-			mode: 'client',
+			head: true,
 		},
 	],
 
@@ -49,7 +61,7 @@ export default {
 		"@nuxt/typescript-build",
 		"@nuxt/postcss8",
 		"@nuxtjs/style-resources",
-		'@nuxtjs/fontawesome'
+		"@nuxtjs/fontawesome",
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [],
@@ -58,8 +70,8 @@ export default {
 	build: {
 		postcss: {
 			plugins: {
-				'postcss-import': {},
-				'tailwindcss/nesting': {},
+				"postcss-import": {},
+				"tailwindcss/nesting": {},
 				tailwindcss: {},
 				autoprefixer: {},
 			},
@@ -68,7 +80,7 @@ export default {
 
 	fontawesome: {
 		icons: {
-		 brands: ['faGithub', "faTwitter"]
-		}
-	   }
+			brands: ["faGithub", "faTwitter"],
+		},
+	},
 };
