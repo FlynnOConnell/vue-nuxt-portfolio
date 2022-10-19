@@ -1,3 +1,10 @@
+<script>
+export default {
+	name: "appheader",
+};
+</script>
+
+
 <template>
 	<!-- START HEADER -->
 	
@@ -31,11 +38,6 @@
 	
 </template>
 
-<script>
-export default {
-	name: "appheader",
-};
-</script>
 
 <style scoped>
 .white {
