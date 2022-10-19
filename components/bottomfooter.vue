@@ -1,3 +1,10 @@
+<script>
+export default {
+	name: "bottomfooter",
+};
+</script>
+
+
 <template>
 	<footer>
 		<a
@@ -19,11 +26,6 @@
 	</footer>
 </template>
 
-<script>
-export default {
-	name: "bottomfooter",
-};
-</script>
 
 <style scoped>
 footer {
