@@ -33,6 +33,7 @@ export default {
 	css: [
 		"~/assets/css/normalize.css",
 		"@/assets/css/main.css",
+		"@/assets/css/styles.css",
 		"@/assets/css/fonts.css",
 		"@fortawesome/fontawesome-svg-core/styles.css",
 	],

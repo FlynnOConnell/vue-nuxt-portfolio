@@ -1,29 +1,33 @@
 <template>
 	<div class="m-8 flex flex-col items-center justify-center">
-		<div class="flex flex-col justify-center">
-			<embed class="dynamic-image" src="../static/images/ps_stack.svg" />
-			<img
-				src="../static/images/PremierSuiteExampleGif.gif"
-				type="image/gif"
-			/>
-
-			<div
-				style="
-					width: 100%;
-					height: 0;
-					padding-bottom: 56%;
-					position: relative;
-				"
-			>
-				<iframe
-					src="../static/images/PremierSuiteExampleGif.gif"
-					width="100%"
-					height="100%"
-					style="position: absolute"
-					frameBorder="0"
-					allowFullScreen
-				></iframe>
+		<div class="flex flex-col flex-wrap justify-center">
+			<div class="flex flex-wrap items-end justify-center">
+				<h1 class="gamma lato ls-small">Premier Suite GUI</h1>
+				<div class="flex justify-between mx-2 mb-2">
+					<embed class="h-12 mx-3" src="../static/icons/cpp.svg" />
+					<embed class="h-12 mx-3" src="../static/icons/c.svg" />
+					<embed class="h-12 mx-3" src="../static/icons/JSON.svg" />
+				</div>
 			</div>
+			<video controls muted autoplay="true">
+				<source
+					src="../static/movies/PremierSuiteExample.mp4"
+					type="video/mp4"
+				/>
+				<source
+					src="../static/movies/PremierSuiteExample_h264_youtube720.mp4"
+					type="video/mp4"
+				/>
+				<source
+					src="../static/movies/PremierSuiteExample_h264_aac.mp4"
+					type="video/mp4"
+				/>
+				<source
+					src="../static/movies/PremierSuiteExample_h264_mobile720.mp4"
+					type="video/mp4"
+				/>
+				Video format not supported by your browser.
+			</video>
 		</div>
 	</div>
 </template>
@@ -62,9 +66,18 @@ export default {
 };
 </script>
 
-<style>
-.dynamic-image {
-	height: 5rem;
+<style scoped>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1;
+	margin-top: 0;
+	color: #fff;
+	display: inline-block;
+	position: relative;
 }
 
 p {

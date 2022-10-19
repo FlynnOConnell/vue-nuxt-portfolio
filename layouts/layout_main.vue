@@ -14,16 +14,22 @@ export default {
 };
 </script>
 
-
 <template>
 	<div class="bg-2 flex flex-col justify-center items-center">
 		<a href="#"></a>
 		<appheader />
-		<hr class="style-two" />
+
 		<div class="container">
 			<links />
 		</div>
-		<h1>Projects</h1>
+		<hr class="style-two mb-10" />
+		<div>
+			<h1
+				class="mt-20 mb-20 gamma lato thin uppercase bold ls-xlarge"
+			>
+				Projects
+			</h1>
+		</div>
 		<div class="container">
 			<Nuxt />
 		</div>
@@ -31,7 +37,7 @@ export default {
 		<div class="container">
 			<resume />
 		</div>
-		
+
 		<div class="spacer"></div>
 		<div class="container">
 			<bottomfooter />
@@ -71,4 +77,3 @@ hr.style-two {
 	height: 10vh;
 }
 </style>
-
