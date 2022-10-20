@@ -18,6 +18,7 @@
         "core-js": "^3.25.5",
         "normalize.css": "^8.0.1",
         "nuxt": "^2.15.8",
+        "nuxt-highlightjs": "^1.0.3",
         "nuxt-vue-material": "^1.2.0",
         "scrollreveal": "^4.0.9",
         "typescript-ilogger": "^1.0.113",

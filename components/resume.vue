@@ -3,7 +3,7 @@ import { tippy } from "vue-tippy";
 import DownloadButton from "./DownloadButton.vue";
 
 export default {
-	name: "resume",
+	name: "Resume",
 	data() {
 		return {
 			message: "Download",
@@ -27,7 +27,7 @@ export default {
 
 <template>
 	<section class="m-8 flex items-center justify-center">
-		<a href="#resumelink"></a>
+		
 		<div
 			class="wrapper flex flex-col justify-center items-center bg-1 border"
 		>

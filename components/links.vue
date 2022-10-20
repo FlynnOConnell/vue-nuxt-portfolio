@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "links",
+	name: "Links",
 	methods: {
 		toGithub() {
 			const link = document.createElement("a");
@@ -11,6 +11,12 @@ export default {
 		toTwitter() {
 			const link = document.createElement("a");
 			link.href = "https://twitter.com/FlynnNeuro";
+			link.target = "_blank";
+			link.click();
+		},
+		toLinkedin() {
+			const link = document.createElement("a");
+			link.href = "https://www.linkedin.com/in/flynnoconnell/";
 			link.target = "_blank";
 			link.click();
 		},
@@ -25,6 +31,9 @@ export default {
 		</button>
 		<button @click="toTwitter">
 			<font-awesome-icon :icon="['fab', 'twitter']" inverse size="2x" />
+		</button>
+		<button @click="toLinkedin">
+			<font-awesome-icon :icon="['fab', 'linkedin']" inverse size="2x" />
 		</button>
 	</div>
 </template>

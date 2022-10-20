@@ -65,7 +65,10 @@ export default {
 		"@nuxtjs/fontawesome",
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+	modules: [
+		['nuxt-highlightjs'
+			]
+	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {

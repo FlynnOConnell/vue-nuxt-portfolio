@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "appheader",
+	name: "AppHeader",
 };
 </script>
 
@@ -25,7 +25,7 @@ export default {
 							<a href="#" class="nav__link">Home</a>
 						</li>
 						<li class="nav__list-item">
-							<a href="#" class="nav__link"> Projects </a>
+							<a href="#projectslink" class="nav__link"> Projects </a>
 						</li>
 						<li class="nav__list-item">
 							<a href="#resumelink" class="nav__link"> Resume </a>
