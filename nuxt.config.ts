@@ -43,10 +43,6 @@ export default {
 			head: true,
 		},
 		{
-			src: "~/plugins/downloadbutton.js",
-			head: true,
-		},
-		{
 			src: "~/plugins/fontawesome.js",
 			head: true,
 		},
