@@ -1,5 +1,5 @@
 <script>
-import AppHeader from "~/components/AppHeader.vue";
+import AppHeader from "../components/AppHeader.vue";
 import Resume from "../components/Resume.vue";
 import AppFooter from "../components/AppFooter.vue";
 import Links from "../components/Links.vue";
