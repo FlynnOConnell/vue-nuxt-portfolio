@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "DownloadButton",
+	name: "downloadbutton",
 };
 </script>
 
@@ -21,4 +21,5 @@ export default {
 img.filter-white {
 	color: #ffff;
 }
+
 </style>

@@ -17,14 +17,14 @@ export default {
 <template>
 	<div class="bg-2 flex flex-col justify-center items-center">
 		<a href="#"></a>
-		<AppHeader />
+		<appheader />
 
 		<div class="container">
-			<Links />
+			<links />
 		</div>
 		<hr class="style-two mb-10" />
 		<a id="projectslink"></a>
-		<div>++
+		<div>
 			<h1 class="mt-20 mb-20 gamma lato thin uppercase bold ls-xlarge">
 				Projects
 			</h1>
@@ -35,12 +35,12 @@ export default {
 		<div class="spacer"></div>
 		<a id="resumelink"></a>
 		<div class="container">
-			<Resume />
+			<resume />
 		</div>
 
 		<div class="spacer"></div>
 		<div class="container">
-			<AppFooter />
+			<appfooter />
 		</div>
 	</div>
 </template>

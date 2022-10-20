@@ -6,8 +6,6 @@ export default {
 
 
 <template>
-	<!-- START HEADER -->
-	
 		<header id="header" class="transition header-fixed">
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">

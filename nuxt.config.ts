@@ -1,5 +1,3 @@
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
@@ -65,10 +63,7 @@ export default {
 		"@nuxtjs/fontawesome",
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		['nuxt-highlightjs'
-			]
-	],
+	modules: [["nuxt-highlightjs"]],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
@@ -84,7 +79,7 @@ export default {
 
 	fontawesome: {
 		icons: {
-			brands: ["faGithub", "faTwitter"],
+			brands: ["faGithub", "faTwitter", "faLinkedin"],
 		},
 	},
 };

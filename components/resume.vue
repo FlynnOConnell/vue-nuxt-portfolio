@@ -1,6 +1,6 @@
 <script>
 import { tippy } from "vue-tippy";
-import DownloadButton from "./DownloadButton.vue";
+import downloadbutton from "./downloadbutton.vue";
 
 export default {
 	name: "resume",
@@ -20,14 +20,13 @@ export default {
 	},
 	components: {
 		tippy,
-		DownloadButton,
+		downloadbutton,
 	},
 };
 </script>
 
 <template>
 	<section class="m-8 flex items-center justify-center">
-		
 		<div
 			class="wrapper flex flex-col justify-center items-center bg-1 border"
 		>
@@ -55,7 +54,7 @@ export default {
 					content="Download"
 					v-tippy="{ placement: 'top', arrow: true }"
 				>
-					<DownloadButton />
+					<downloadbutton />
 				</button>
 			</div>
 			<div id="myresume" class="" style="padding: 0rem 1rem 1rem 1rem">
