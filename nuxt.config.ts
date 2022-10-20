@@ -43,7 +43,7 @@ export default {
 			head: true,
 		},
 		{
-			src: "~/plugins/DownloadButton.js",
+			src: "~/plugins/downloadbutton.js",
 			head: true,
 		},
 		{
