@@ -1,6 +1,6 @@
 <script>
 export default {
-	name: "Links",
+	name: "links",
 	methods: {
 		toGithub() {
 			const link = document.createElement("a");

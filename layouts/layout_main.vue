@@ -1,15 +1,15 @@
 <script>
-import AppHeader from "@/components/AppHeader.vue";
-import Resume from "@/components/Resume.vue";
-import AppFooter from "@/components/AppFooter.vue";
-import Links from "@/components/Links.vue";
+import appheader from "../components/appheader.vue";
+import resume from "../components/resume.vue";
+import appfooter from "../components/appfooter.vue";
+import links from "../components/links.vue";
 
 export default {
 	components: {
-		AppHeader,
-		Links,
-		Resume,
-		AppFooter,
+		appheader,
+		links,
+		resume,
+		appfooter,
 	},
 };
 </script>
@@ -24,7 +24,7 @@ export default {
 		</div>
 		<hr class="style-two mb-10" />
 		<a id="projectslink"></a>
-		<div>
+		<div>++
 			<h1 class="mt-20 mb-20 gamma lato thin uppercase bold ls-xlarge">
 				Projects
 			</h1>

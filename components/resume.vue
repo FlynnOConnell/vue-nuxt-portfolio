@@ -3,7 +3,7 @@ import { tippy } from "vue-tippy";
 import DownloadButton from "./DownloadButton.vue";
 
 export default {
-	name: "Resume",
+	name: "resume",
 	data() {
 		return {
 			message: "Download",
