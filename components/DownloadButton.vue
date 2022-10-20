@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-	<div class="container">
+	<div class="relative flex justify-start">
 		<button name="favorite">
 			<embed
 				width="20px"
@@ -17,11 +17,6 @@ export default {
 </template>
 
 <style scoped>
-.container {
-	position: relative;
-	display: flex;
-	justify-content: start;
-}
 
 img.filter-white {
 	color: #ffff;
