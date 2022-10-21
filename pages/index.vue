@@ -6,7 +6,7 @@ export default {
 	layout: "layout_main",
 	components: {
 		CppIcon,
-		CIcon
+		CIcon,
 	},
 	head() {
 		return {
@@ -39,14 +39,11 @@ export default {
 };
 </script>
 
-
 <template>
 	<div class="m-8 flex flex-col items-center justify-center">
 		<div class="flex flex-col flex-wrap justify-center">
 			<div class="flex flex-wrap items-end justify-center">
-				<h1 class="gamma lato ls-small">
-					Premier Suite GUI
-				</h1>
+				<h1 class="gamma lato ls-small">Premier Suite GUI</h1>
 				<div class="flex justify-between mx-2 mb-2">
 					<CppIcon />
 					<CIcon />
@@ -72,44 +69,37 @@ export default {
 				Video format not supported by your browser.
 			</video>
 		</div>
-		<div class="container m-0">
-	<pre>
-			<code v-highlight class="c++ m-0">
-				/// Example of Widget Rendering in DirectX12 
-				void PremierSuite::Render()
-				{
-					static bool show_app_main_menu_bar = true;
-					if (ImGui::Begin(menuTitle.c_str(),
-					 &isWindowOpen,
-					 ImGuiWindowFlags_None))
+		<div class="container pt-7 m-0">
+			<pre>
+				<code v-highlight class="c++ m-0">
+					void PremierSuite::Render()
 					{
-						if (ImGui::BeginTabBar(
-							"#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {
-				
-							renderInstantSettingsTab();
-							renderKeybindsTab();
-							ImGui::EndTabBar();
+						static bool show_app_main_menu_bar = true;
+						if (ImGui::Begin(menuTitle.c_str(),
+							&isWindowOpen,
+							ImGuiWindowFlags_None))
+						{
+							if (ImGui::BeginTabBar(
+								"#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {
+					
+								renderInstantSettingsTab();
+								renderKeybindsTab();
+								ImGui::EndTabBar();
+							}
+						}
+						ImGui::End();
+					
+						if (!isWindowOpen) {
+							cvarManager->executeCommand("togglemenu " + GetMenuName());
 						}
 					}
-					ImGui::End();
-				
-					if (!isWindowOpen) {
-						cvarManager->executeCommand("togglemenu " + GetMenuName());
-					}
-				}
-			</code>
+				</code>
 		  </pre>
 		</div>
 	</div>
 </template>
 
-
 <style scoped>
-
-code {
-	background-color: black;
-}
-
 h1,
 h2,
 h3,
@@ -123,6 +113,11 @@ h6 {
 	position: relative;
 }
 
+pre,
+code {
+	white-space: normal;
+}
+
 p {
 	color: #adb7bd;
 	font-family: "Lucida Sans", Arial, sans-serif;
@@ -131,5 +126,4 @@ p {
 	text-indent: 30px;
 	margin: 0;
 }
-
 </style>

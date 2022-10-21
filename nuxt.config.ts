@@ -1,3 +1,4 @@
+
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
@@ -46,6 +47,10 @@ export default {
 			src: "~/plugins/fontawesome.js",
 			head: true,
 		},
+		{
+			src: "~/plugins/hljsVuePlugin.js",
+			head: true,
+		}
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
