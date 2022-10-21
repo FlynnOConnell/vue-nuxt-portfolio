@@ -1,15 +1,15 @@
 <script>
-import appheader from "../components/appheader.vue";
-import resume from "../components/resume.vue";
-import appfooter from "../components/appfooter.vue";
-import links from "../components/links.vue";
+import BaseAppHeader from "~~/components/Base/BaseAppHeader.vue";
+import BaseAppFooter from "~~/components/Base/BaseAppFooter.vue";
+import AdditionLinks from "~~/components/Addition/AdditionLinks.vue";
+import SectionResume from "~~/components/Section/SectionResume.vue";
 
 export default {
 	components: {
-		appheader,
-		links,
-		resume,
-		appfooter,
+		BaseAppHeader,
+		AdditionLinks,
+		SectionResume,
+		BaseAppFooter,
 	},
 };
 </script>
@@ -17,10 +17,10 @@ export default {
 <template>
 	<div class="bg-2 flex flex-col justify-center items-center">
 		<a href="#"></a>
-		<appheader />
+		<base-app-header />
 
 		<div class="container">
-			<links />
+			<!-- <links /> -->
 		</div>
 		<hr class="style-two mb-10" />
 		<a id="projectslink"></a>
@@ -29,18 +29,16 @@ export default {
 				Projects
 			</h1>
 		</div>
-		<div class="container">
-			<Nuxt />
-		</div>
+		<div class="container"></div>
 		<div class="spacer"></div>
 		<a id="resumelink"></a>
 		<div class="container">
-			<resume />
+			<!-- <resume /> -->
 		</div>
 
 		<div class="spacer"></div>
 		<div class="container">
-			<appfooter />
+			<!-- <appfooter /> -->
 		</div>
 	</div>
 </template>

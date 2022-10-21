@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
 	name: "links",
 	methods: {
@@ -38,4 +38,4 @@ export default {
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped></style> -->

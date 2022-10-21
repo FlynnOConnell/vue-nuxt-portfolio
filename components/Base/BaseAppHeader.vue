@@ -1,9 +1,8 @@
 <script>
 export default {
-	name: "appheader",
+	name: "BaseAppHeader",
 };
 </script>
-
 
 <template>
 		<header id="header" class="transition header-fixed">
@@ -12,7 +11,7 @@ export default {
 					<div class="image-container transition flex justify-center">
 						<embed
 							class="dynamic-image white transition"
-							src="../static/signature_black.svg"
+							src="public/images/signature_black.svg"
 						/>
 					</div>
 				</a>
@@ -32,8 +31,6 @@ export default {
 				</nav>
 			</div>
 		</header>
-		
-	
 </template>
 
 

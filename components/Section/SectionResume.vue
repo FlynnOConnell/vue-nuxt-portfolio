@@ -1,6 +1,6 @@
 <script>
 import { tippy } from "vue-tippy";
-import downloadbutton from "./downloadbutton.vue";
+import downloadbutton from "../Addition/AdditionDownloadButton.vue";
 
 export default {
 	name: "resume",

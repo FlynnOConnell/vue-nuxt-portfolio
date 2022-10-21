@@ -1,13 +1,13 @@
 <script>
-import CppIcon from "../components/svgicons/CppIcon.vue";
-import CIcon from "../components/svgicons/CIcon.vue";
+// import CppIcon from "../components/svgicons/CppIcon.vue";
+// import CIcon from "../components/svgicons/CIcon.vue";
 
 export default {
-	layout: "layout_main",
-	components: {
-		CppIcon,
-		CIcon,
-	},
+	// layout: "layout_main",
+	// components: {
+	// 	CppIcon,
+	// 	CIcon,
+	// },
 	head() {
 		return {
 			title: "Flynns Website",
@@ -45,8 +45,8 @@ export default {
 			<div class="flex flex-wrap items-end justify-center">
 				<h1 class="gamma lato ls-small">Premier Suite GUI</h1>
 				<div class="flex justify-between mx-2 mb-2">
-					<CppIcon />
-					<CIcon />
+					<!-- <CppIcon />
+					<CIcon /> -->
 				</div>
 			</div>
 			<video controls muted autoplay="true">

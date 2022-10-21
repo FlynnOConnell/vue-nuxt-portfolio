@@ -1,0 +1,20 @@
+// Add a theme class you want to use
+// See more themes https://highlightjs.org/static/demo/
+import { defineNuxtPlugin } from "#app"
+
+import 'highlight.js/styles/night-owl.css';
+
+import hljs from 'highlight.js/lib/core';
+
+import c from 'highlight.js/lib/languages/c';
+import cpp from 'highlight.js/lib/languages/cpp';
+
+import hljsVuePlugin from '@highlightjs/vue-plugin';
+
+// Register the languages
+hljs.registerLanguage('c', c);
+hljs.registerLanguage('cpp', cpp);
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(hljsVuePlugin);
+});
