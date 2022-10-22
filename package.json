@@ -17,6 +17,7 @@
     "dev-debug": "node --inspect node_modules/.bin/nuxt"
   },
   "devDependencies": {
+    "@nuxtjs/svg": "^0.4.0",
     "@nuxtjs/tailwindcss": "^6.0.1",
     "@vue/compiler-sfc": "^3.2.41",
     "css-loader": "^6.7.1",
