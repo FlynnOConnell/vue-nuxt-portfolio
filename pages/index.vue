@@ -69,9 +69,9 @@ export default {
 				Video format not supported by your browser.
 			</video>
 		</div>
-		<div class="container pt-7 m-0">
+		<div class="container pt-7 m-0 overflow-auto relative">
 			<pre>
-				<code v-highlight class="c++ m-0">
+				<code v-highlight class="c++">
 					void PremierSuite::Render()
 					{
 						static bool show_app_main_menu_bar = true;
@@ -88,7 +88,6 @@ export default {
 							}
 						}
 						ImGui::End();
-					
 						if (!isWindowOpen) {
 							cvarManager->executeCommand("togglemenu " + GetMenuName());
 						}
@@ -113,9 +112,15 @@ h6 {
 	position: relative;
 }
 
-pre,
-code {
-	white-space: normal;
+pre {
+
+    padding: 5px; 
+    margin: 5px; 
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;       
 }
 
 p {

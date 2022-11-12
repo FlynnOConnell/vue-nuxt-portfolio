@@ -25,6 +25,14 @@ export default {
 				src: "https://cdn.jsdelivr.net/npm/vue-tippy@4/dist/vue-tippy.min.js",
 				client: true,
 			},
+			{
+				src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css",
+				client: true,
+			},
+			{
+				src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js",
+				client: true,
+			}
 		],
 	},
 
@@ -47,10 +55,10 @@ export default {
 			src: "~/plugins/fontawesome.js",
 			head: true,
 		},
-		{
-			src: "~/plugins/hljsVuePlugin.js",
-			head: true,
-		}
+		// {
+		// 	src: "~/plugins/hljsVuePlugin.js",
+		// 	head: true,
+		// }
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
