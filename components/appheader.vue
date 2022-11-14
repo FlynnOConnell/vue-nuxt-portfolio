@@ -5,12 +5,12 @@ export default {
 </script>
 
 <template>
-		<header id="header" class="transition white header-fixed">
+		<header id="header" class="transition w header-fixed">
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">
-					<div class="image-container transition flex justify-center">
+					<div class="image-container transition w flex justify-center">
 						<embed
-							class="dynamic-image white transition"
+							class="dynamic-image w transition"
 							src="../static/signature_black.svg"
 						/>
 					</div>
@@ -42,7 +42,7 @@ export default {
 
 
 <style scoped>
-.white {
+.w {
 	filter: brightness(0) invert(1);
 }
 

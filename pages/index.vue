@@ -35,7 +35,7 @@ export default {
 				},
 				{
 					src: "~/assets/css/styles.css",
-				}
+				},
 			],
 		};
 	},
@@ -45,17 +45,18 @@ export default {
 <template>
 	<div class="m-8 flex flex-col items-center justify-center">
 		<NowSpotify />
-		<div class="delta white">
-		Hi! I'm Flynn, a software developer and scientist living in New York. I'm currently working on a few projects, including a data analysis pipeline, a few machine learning algorithms and a video game plugin. 
-		<div class="flex flex-row justify-center">
-			<p> My baby gurls: </p>
-			<CppIcon />
-			<CIcon />
+		<div class="delta text-white">
+			Hi! I'm Flynn, a software developer and scientist living in New
+			York. I'm currently working on a few projects, including a data
+			analysis pipeline, a few machine learning algorithms and a video
+			game plugin.
+			<div class="flex flex-row justify-center">
+				<p>My baby gurls:</p>
+				<CppIcon />
+				<CIcon />
+			</div>
 		</div>
-	</div>
 	</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

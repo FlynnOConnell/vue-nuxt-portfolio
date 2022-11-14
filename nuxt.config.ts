@@ -70,12 +70,16 @@ export default {
 		"@nuxt/postcss8",
 		"@nuxtjs/style-resources",
 		"@nuxtjs/fontawesome",
+		// With options
+		['@nuxtjs/vuetify', {
+			
+			}
+		]
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
 		["nuxt-highlightjs"],
 		"@nuxtjs/axios",
-		"@nuxtjs/style-resources",
 		"@nuxtjs/auth-next",
 	],
 	auth: {
