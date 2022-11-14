@@ -33,6 +33,9 @@ export default {
 				{
 					src: "~/assets/css/colors.css",
 				},
+				{
+					src: "~/assets/css/styles.css",
+				}
 			],
 		};
 	},
@@ -41,94 +44,18 @@ export default {
 
 <template>
 	<div class="m-8 flex flex-col items-center justify-center">
-		<div class="flex flex-col flex-wrap justify-center">
-			<div class="flex flex-wrap items-end justify-center">
-				<h1 class="gamma lato ls-small">Premier Suite GUI</h1>
-				<div class="flex justify-between mx-2 mb-2">
-					<CppIcon />
-					<CIcon />
-				</div>
-			</div>
-			<video controls muted autoplay="true">
-				<source
-					src="../static/movies/PremierSuiteExample.mp4"
-					type="video/mp4"
-				/>
-				<source
-					src="../static/movies/PremierSuiteExample_h264_youtube720.mp4"
-					type="video/mp4"
-				/>
-				<source
-					src="../static/movies/PremierSuiteExample_h264_aac.mp4"
-					type="video/mp4"
-				/>
-				<source
-					src="../static/movies/PremierSuiteExample_h264_mobile720.mp4"
-					type="video/mp4"
-				/>
-				Video format not supported by your browser.
-			</video>
+		<NowSpotify />
+		<div class="delta white">
+		Hi! I'm Flynn, a software developer and scientist living in New York. I'm currently working on a few projects, including a data analysis pipeline, a few machine learning algorithms and a video game plugin. 
+		<div class="flex flex-row justify-center">
+			<p> My baby gurls: </p>
+			<CppIcon />
+			<CIcon />
 		</div>
-		<div class="container pt-7 m-0 overflow-auto relative">
-			<pre>
-				<code v-highlight class="c++">
-					void PremierSuite::Render()
-					{
-						static bool show_app_main_menu_bar = true;
-						if (ImGui::Begin(menuTitle.c_str(),
-							&isWindowOpen,
-							ImGuiWindowFlags_None))
-						{
-							if (ImGui::BeginTabBar(
-								"#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {
-					
-								renderInstantSettingsTab();
-								renderKeybindsTab();
-								ImGui::EndTabBar();
-							}
-						}
-						ImGui::End();
-						if (!isWindowOpen) {
-							cvarManager->executeCommand("togglemenu " + GetMenuName());
-						}
-					}
-				</code>
-		  </pre>
-		</div>
+	</div>
 	</div>
 </template>
 
 <style scoped>
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 1;
-	margin-top: 0;
-	color: #fff;
-	display: inline-block;
-	position: relative;
-}
 
-pre {
-
-    padding: 5px; 
-    margin: 5px; 
-    white-space: pre-wrap;       
-    white-space: -moz-pre-wrap;  
-    white-space: -pre-wrap;      
-    white-space: -o-pre-wrap;    
-    word-wrap: break-word;       
-}
-
-p {
-	color: #adb7bd;
-	font-family: "Lucida Sans", Arial, sans-serif;
-	font-size: 16px;
-	line-height: 26px;
-	text-indent: 30px;
-	margin: 0;
-}
 </style>

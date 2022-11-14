@@ -1,14 +1,10 @@
 <script>
 import { tippy } from "vue-tippy";
-import downloadbutton from "./downloadbutton.vue";
+// import downloadbutton from "./downloadbutton.vue";
 
 export default {
+	layout: "layout_main",
 	name: "resume",
-	data() {
-		return {
-			message: "Download",
-		};
-	},
 	methods: {
 		downloadMe() {
 			const link = document.createElement("a");
@@ -20,7 +16,35 @@ export default {
 	},
 	components: {
 		tippy,
-		downloadbutton,
+		// downloadbutton,
+	},
+	head() {
+		return {
+			title: "Flynns Website",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"My personal portfolio with some fun things I've done and will continue doing.",
+				},
+			],
+			script: [
+				{
+					src: "./js/observer.js",
+					body: true,
+				},
+				{
+					src: "./js/responsive.js",
+					body: true,
+				},
+			],
+			css: [
+				{
+					src: "~/assets/css/colors.css",
+				},
+			],
+		};
 	},
 };
 </script>
@@ -54,7 +78,7 @@ export default {
 					content="Download"
 					v-tippy="{ placement: 'top', arrow: true }"
 				>
-					<downloadbutton />
+					<!-- <downloadbutton /> -->
 				</button>
 			</div>
 			<div id="myresume" class="" style="padding: 0rem 1rem 1rem 1rem">

@@ -72,8 +72,20 @@ export default {
 		"@nuxtjs/fontawesome",
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [["nuxt-highlightjs"]],
-
+	modules: [
+		["nuxt-highlightjs"],
+		"@nuxtjs/axios",
+		"@nuxtjs/style-resources",
+		"@nuxtjs/auth-next",
+	],
+	auth: {
+		//options
+	},
+	env: {
+		spotifyClientID: process.env.SPOTIFY_CLIENT_ID,
+		spotifyClientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+		spotifyRefreshToken: process.env.SPOTIFY_REFRESH_TOKEN
+	  },
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		postcss: {

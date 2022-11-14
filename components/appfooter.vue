@@ -1,9 +1,9 @@
 <script>
 export default {
 	name: "appfooter",
-};
+	client: true,
+};	
 </script>
-
 
 <template>
 	<footer>
@@ -20,7 +20,7 @@ export default {
 		<p class="text-center text-lg text-white">
 			Copyright &copy; 2022 Flynn OConnell
 		</p>
-		<nuxt-link class="text-white top-link" to="#">
+		<nuxt-link class="text-white top-link" to="home">
 			Back to Top
 		</nuxt-link>
 	</footer>

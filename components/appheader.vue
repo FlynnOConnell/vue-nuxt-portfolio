@@ -4,9 +4,8 @@ export default {
 };
 </script>
 
-
 <template>
-		<header id="header" class="transition header-fixed">
+		<header id="header" class="transition white header-fixed">
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">
 					<div class="image-container transition flex justify-center">
@@ -16,17 +15,22 @@ export default {
 						/>
 					</div>
 				</a>
-
 				<nav class="main-nav justify-center pt-3">
 					<ul id="dynamic-node" class="nav__list">
 						<li class="nav__list-item">
-							<a href="#" class="nav__link">Home</a>
+							<a href="/" class="nav__link">
+								Home
+							</a>
 						</li>
 						<li class="nav__list-item">
-							<a href="#projectslink" class="nav__link"> Projects </a>
+							<a href="/projects" class="nav__link">
+								Projects 
+							</a>
 						</li>
 						<li class="nav__list-item">
-							<a href="#resumelink" class="nav__link"> Resume </a>
+							<a href="/resume" class="nav__link"> 
+								Resume 
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -164,22 +168,6 @@ header {
 	transition: all 1s ease-in-out;
 }
 
-.tilecontainer.toggled {
-	animation: none;
-}
-
-.tilecontainer.toggled > #title {
-	opacity: 0;
-}
-
-.tilecontainer.toggled > #icon {
-	opacity: 1;
-}
-
-.tilecontainer.toggled > #tiles > .tile:hover {
-	opacity: 0.1 !important;
-}
-
 .centered {
 	left: 50%;
 	position: absolute;
@@ -187,14 +175,4 @@ header {
 	transform: translate(-50%, -50%);
 }
 
-#tiles {
-	height: calc(100vh - 1px);
-	width: calc(100vw - 1px);
-	position: relative;
-	z-index: 2;
-
-	display: grid;
-	grid-template-columns: repeat(var(--columns), 1fr);
-	grid-template-rows: repeat(var(--rows), 1fr);
-}
 </style>

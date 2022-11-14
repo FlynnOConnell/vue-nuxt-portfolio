@@ -1,6 +1,5 @@
 <script>
 import appheader from "../components/appheader.vue";
-import resume from "../components/resume.vue";
 import appfooter from "../components/appfooter.vue";
 import links from "../components/links.vue";
 
@@ -8,7 +7,6 @@ export default {
 	components: {
 		appheader,
 		links,
-		resume,
 		appfooter,
 	},
 };
@@ -18,38 +16,17 @@ export default {
 	<div class="bg-2 flex flex-col justify-center items-center">
 		<a href="#"></a>
 		<appheader />
-
 		<div class="container">
 			<links />
 		</div>
 		<hr class="style-two mb-10" />
-		<a id="projectslink"></a>
-		<div>
-			<h1 class="mt-20 mb-20 gamma lato thin uppercase bold ls-xlarge">
-				Projects
-			</h1>
-		</div>
 		<div class="container">
 			<Nuxt />
-		</div>
-		<div class="spacer"></div>
-		<a id="resumelink"></a>
-		<div class="container">
-			<resume />
-		</div>
-
-		<div class="spacer"></div>
-		<div class="container">
-			<appfooter />
 		</div>
 	</div>
 </template>
 
 <style>
-/* globals .all substitute for body! */
-.all {
-	margin: 0;
-}
 
 h1 {
 	color: #ffffff;
