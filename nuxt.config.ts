@@ -26,10 +26,6 @@ export default {
 				client: true,
 			},
 			{
-				src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css",
-				client: true,
-			},
-			{
 				src: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js",
 				client: true,
 			}
@@ -55,10 +51,16 @@ export default {
 			src: "~/plugins/fontawesome.js",
 			head: true,
 		},
-		// {
-		// 	src: "~/plugins/hljsVuePlugin.js",
-		// 	head: true,
-		// }
+		{
+			src: "~/plugins/hljsVuePlugin.js",
+			head: true,
+		},
+		{
+			src: '~/plugins/directives.client.js'
+		},
+		{
+			src: '~/plugins/vuetify.js',
+		}
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
@@ -74,7 +76,8 @@ export default {
 		['@nuxtjs/vuetify', {
 			
 			}
-		]
+		],
+		"@nuxtjs/svg",
 	],
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
@@ -84,6 +87,17 @@ export default {
 	],
 	auth: {
 		//options
+	},
+	svg: {
+		vueSvgLoader: {
+			// vue-svg-loader options
+		},
+		svgSpriteLoader: {
+			// svg-sprite-loader options
+		},
+		fileLoader: {
+			// file-loader options
+		}
 	},
 	env: {
 		spotifyClientID: process.env.SPOTIFY_CLIENT_ID,
@@ -100,6 +114,7 @@ export default {
 				autoprefixer: {},
 			},
 		},
+		transpile: ['vuetify/lib']
 	},
 
 	fontawesome: {

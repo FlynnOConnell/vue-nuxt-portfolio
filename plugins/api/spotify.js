@@ -36,7 +36,7 @@ export const getNowPlaying = async () => {
 const RECENTLY_PLAYED_ENDPOINT = 'https://api.spotify.com/v1/me/player/recently-played'
 export const getRecentlyPlayed = async () => {
   const { access_token: accessToken } = await getAccessToken()
-  return fetch(NOW_PLAYING_ENDPOINT, {
+  return fetch(RECENTLY_PLAYED_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${accessToken}`,
     //   'Content-Type': 'application/json'
@@ -44,10 +44,10 @@ export const getRecentlyPlayed = async () => {
   })
 }
 
-const TOP_TRACKS_ENDPOINT = 'https://api.spotify.com/v1/me/top/type'
+const TOP_TRACKS_ENDPOINT = 'https://api.spotify.com/v1/me/top/tracks'
 export const getTopTracks = async () => {
   const { access_token: accessToken } = await getAccessToken()
-  return fetch(NOW_PLAYING_ENDPOINT, {
+  return fetch(TOP_TRACKS_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${accessToken}`
     }

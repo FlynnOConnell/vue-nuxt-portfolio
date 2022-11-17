@@ -1,41 +1,36 @@
 <template>
 	<section class="flexed-line justify-center mt-5">
-		<!-- Spotify Icon Component here -->
-		<img
-			class="spotify-icon"
-			src="../static/icons/spotify.png"
-			alt="Spotify Logo"
-		/>
 		<div class="flex items-center text-yellow-600 text-xs ml-2">
-			<span>{{ currentTrackStr }}</span>
+			<span>{{ recentTracksStr }}</span>
 		</div>
 	</section>
 </template>
 
 <script>
-import { getNowPlaying } from "../plugins/spotify";
+import { getRecentlyPlayed } from "../../plugins/api/spotify";
 export default {
-	name: "NowSpotify",
+	name: "RecentSpotify",
 	data() {
 		return {
-			currentTrackStr: "Nothing playing right now.",
+			recentTracksStr: "Nothing playing right now.",
 		};
 	},
 	watch: {
 		"$route.path"() {
-			this.currentTrack();
+			this.recentTracks();
 		},
 	},
 	beforeMount() {
-		this.currentTrack();
+		this.recentTracks();
 	},
 	methods: {
-		async currentTrack() {
+		async recentTracks() {
 			try {
-				const response = await getNowPlaying();
+				const response = await getRecentlyPlayed();
 				if (response.status === 200) {
-					const { item, is_playing: np } = await response.json();
-					this.currentTrackStr = `${
+					const { items } = await response.json();
+                    console.log(items)
+					this.recentTracksStr = `${
 						np ? "Now playing:" : "Last played:"
 					} ${item.name}
                                     by ${item.artists
@@ -43,7 +38,7 @@ export default {
 										.join(", ")}.`;
 				}
 			} catch (e) {
-				this.currentTrackStr = "Couldn't fetch data :(";
+				this.recentTracksStr = "Couldn't fetch data :(";
 			}
 		},
 	},

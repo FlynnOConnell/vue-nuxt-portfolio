@@ -51,7 +51,9 @@ export default {
 <template>
 	<div class="m-8 flex flex-col items-center justify-center">
 		<div class="flex flex-col flex-wrap justify-center">
-			<div class="flex flex-wrap items-center justify-center align-center gap-4">
+			<div
+				class="flex flex-wrap items-center justify-center align-center gap-4"
+			>
 				<button @click="psGithub">
 					<font-awesome-icon
 						:icon="['fab', 'github']"
@@ -61,7 +63,7 @@ export default {
 				</button>
 
 				<h1 class="gamma lato ls-small">Premier Suite GUI</h1>
-				<div class="flex justify-between mx-2 mb-2">
+				<div class="flex justify-left mx-2 mb-2">
 					<CppIcon />
 					<CIcon />
 				</div>
@@ -86,30 +88,40 @@ export default {
 				Video format not supported by your browser.
 			</video>
 		</div>
+
+		<h5>PremierSuite</h5>
+		<p>
+			is a downloadable plugin for
+			<a href="https://www.rocketleague.com/">RocketLeague</a> that allow
+			users to manipulate the server to instantly leave, join or change
+			games. It is written in C++ and uses the ImGui framework with a
+			built-in Gui to both extend and provide additional functionality
+			within rocket league.
+		</p>
+
 		<div class="container pt-7 m-0 overflow-auto relative rounded-md">
-			<pre class="rounded-md">
-			<code v-highlight class="c++">
-	// From ImGui namespace
-	void PremierSuite::Render()
+			<pre>
+			<code v-highlight class="c++ rounded-3xl">// From ImGui namespace
+void PremierSuite::Render()
+{
+	static bool show_app_main_menu_bar = true;
+	if (ImGui::Begin(menuTitle.c_str(),
+		&isWindowOpen,
+		ImGuiWindowFlags_None))
 	{
-		static bool show_app_main_menu_bar = true;
-		if (ImGui::Begin(menuTitle.c_str(),
-			&isWindowOpen,
-			ImGuiWindowFlags_None))
-		{
-			if (ImGui::BeginTabBar(
-				"#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {
-	
-				renderInstantSettingsTab();
-				renderKeybindsTab();
-				ImGui::EndTabBar();
-			}
-		}
-		ImGui::End();
-		if (!isWindowOpen) {
-			cvarManager->executeCommand("togglemenu " + GetMenuName());
+		if (ImGui::BeginTabBar(
+			"#TabBar", ImGuiTabBarFlags_NoCloseWithMiddleMouseButton)) {
+
+			renderInstantSettingsTab();
+			renderKeybindsTab();
+			ImGui::EndTabBar();
 		}
 	}
+	ImGui::End();
+	if (!isWindowOpen) {
+		cvarManager->executeCommand("togglemenu " + GetMenuName());
+	}
+}
 			</code>
 		  </pre>
 		</div>
@@ -131,10 +143,10 @@ h6 {
 }
 
 code {
-	font-family: "Roboto Mono", monospace;
+	/* font-family: "Roboto Mono", monospace; */
 	font-size: 0.7rem;
-	background-color: #1b3435;
-    color: rgb(176, 176, 176);
+	/* background-color: #1D192B; */
+	/* color: rgb(176, 176, 176); */
 }
 
 pre {

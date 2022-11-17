@@ -3,19 +3,24 @@ import appheader from "../components/appheader.vue";
 import appfooter from "../components/appfooter.vue";
 import links from "../components/links.vue";
 
-
 export default {
+	name: "App",
 	components: {
 		appheader,
-		links,
 		appfooter,
+		links,
 	},
 };
 </script>
 
 <template>
-	<v-app>
-		<v-main class="bg-2">
+	<div class="min-h-[200px]">
+		<v-app
+			id="main"
+			:style="{
+				background: '#001f3f',
+			}"
+		>
 			<div class="flex flex-col justify-center items-center">
 				<a href="#"></a>
 				<appheader />
@@ -27,18 +32,40 @@ export default {
 					<Nuxt />
 				</div>
 			</div>
-		</v-main>
-	</v-app>
+			<div>
+				<v-card
+					class="overflow-hidden mx-auto relative"
+					height="56"
+					max-width="500"
+					color="dark"
+					target="hide-on-scroll"
+				>
+					<v-bottom-navigation absolute hide-on-scroll horizontal>
+						<v-btn color="deep-purple accent-4" text>
+							<span>Recents</span>
+
+							<v-icon>mdi-history</v-icon>
+						</v-btn>
+
+						<v-btn color="deep-purple accent-4" text>
+							<span>Favorites</span>
+
+							<v-icon>mdi-heart</v-icon>
+						</v-btn>
+
+						<v-btn color="deep-purple accent-4" text>
+							<span>Nearby</span>
+
+							<v-icon>mdi-map-marker</v-icon>
+						</v-btn>
+					</v-bottom-navigation>
+				</v-card>
+			</div>
+		</v-app>
+	</div>
 </template>
 
 <style scoped>
-v-application {
-	background-color: #191c1b !important;
-}
-
-.bg-2 {
-	background-color: #191c1b !important;
-}
 
 h1 {
 	color: #ffffff;
@@ -52,6 +79,7 @@ h1 {
 .container {
 	padding: 0 1em;
 	max-width: 60rem;
+	min-height: 40vh;
 }
 
 hr.style-two {
@@ -60,9 +88,5 @@ hr.style-two {
 	width: 85vh;
 	border-bottom: 1px solid rgba(247, 247, 247, 0.3);
 	overflow: none;
-}
-
-.spacer {
-	height: 10vh;
 }
 </style>

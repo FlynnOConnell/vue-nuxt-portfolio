@@ -2,6 +2,8 @@
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
+    './src/**/*.{html,js}',
+    './node_modules/tw-elements/dist/js/**/*.js',
     "./components/(.{js,vuew,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
@@ -11,7 +13,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin'),
+  ],
   module: {
     rules: [
       {

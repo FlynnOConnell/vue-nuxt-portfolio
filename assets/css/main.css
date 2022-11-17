@@ -11,6 +11,10 @@
 	--myoutline: #89938f;
 }
 
+.icon:hover {
+	filter: url(#iconfilter);
+}
+
 html {scroll-behavior: smooth;}
 h1, h2, h3 {margin: 0;}
 h2, h3, p { margin-bottom: 1em;}

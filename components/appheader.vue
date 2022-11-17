@@ -5,12 +5,12 @@ export default {
 </script>
 
 <template>
-		<header id="header" class="transition w header-fixed">
+		<header id="header" class="w header-fixed nav-scrolled">
 			<div class="header-limiter">
 				<a href="#" class="site-logo" aria-label="homepage">
-					<div class="image-container transition w flex justify-center">
+					<div class="image-container w flex justify-center">
 						<embed
-							class="dynamic-image w transition"
+							class="dynamic-image w"
 							src="../static/signature_black.svg"
 						/>
 					</div>
@@ -66,7 +66,6 @@ export default {
 
 header {
 	--text: #f4f4f4;
-	--text-inverse: #333;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -76,7 +75,6 @@ header {
 	justify-content: center;
 	height: 20vh;
 	padding: 2em 3em;
-	transition: background 250ms ease-in;
 	background: transparent;
 	color: var(--text);
 }
@@ -97,7 +95,7 @@ header {
 	position: relative;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-size: 1.5vh;
+	font-size: 3.5vh;
 }
 
 .nav__link:after {
