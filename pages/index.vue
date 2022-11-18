@@ -5,12 +5,38 @@ import PyIcon from "../components/svgicons/PyIcon.vue";
 import JavaIcon from "../components/svgicons/JavaIcon.vue";
 
 export default {
+	name: "carousel",
 	layout: "layout_main",
 	components: {
 		CppIcon,
 		CIcon,
 		PyIcon,
 		JavaIcon,
+	},
+	data() {
+		return {
+			hover: false,
+		};
+	},
+	methods: {
+		toGithub() {
+			const link = document.createElement("a");
+			link.href = "https://github.com/NeuroPyPy";
+			link.target = "_blank";
+			link.click();
+		},
+		toTwitter() {
+			const link = document.createElement("a");
+			link.href = "https://twitter.com/FlynnNeuro";
+			link.target = "_blank";
+			link.click();
+		},
+		toLinkedin() {
+			const link = document.createElement("a");
+			link.href = "https://www.linkedin.com/in/flynnoconnell/";
+			link.target = "_blank";
+			link.click();
+		},
 	},
 	head() {
 		return {
@@ -25,20 +51,20 @@ export default {
 			],
 			script: [
 				{
-					src: "./js/observer.js",
+					src: "./js/responsive.js",
 					body: true,
 				},
 				{
-					src: "./js/responsive.js",
-					body: true,
+					src: "/js/layout.js",
+					// body: true,
 				},
 			],
 			css: [
 				{
-					src: "~/assets/css/colors.css",
+					src: "~/assets/css/styles.css",
 				},
 				{
-					src: "~/assets/css/styles.css",
+					src: "~/assets/css/main.css",
 				},
 			],
 		};
@@ -47,81 +73,231 @@ export default {
 </script>
 
 <template>
-	<div class="m-8 flex flex-col items-center justify-center">
-		<div class="text-holder">
-			<div class="delta text-white text-center">
-				<p class="capitalize m-5 hello">
-					Hi! I'm Flynn, a software developer and scientist living in
-					New York. I'm currently working on a few projects, including
-					a data analysis pipeline, a few machine learning algorithms
-					and a video game plugin.
-				</p>
+	<div class="body">
+		<nav data-toggled="false" data-transitionable="false">
+			<div id="nav-logo-section" class="nav-section">
+				<a
+					href="#"
+				>
+					<font-awesome-icon
+						:icon="['fas', 'flask']"
+						inverse
+						size="2x"
+					/>
+				</a>
+				<div class="flex justify-center align-center items-center">
+					<a href="#">
+						<embed
+							@mouseenter="hover = true"
+							@mouseleave="hover = false"
+							class="svg"
+							:class="{ 'svg-hover': hover }"
+							src="../static/signature_black.svg"
+						/>
+					</a>
+				</div>
 			</div>
-		</div>
-		<div class="spacer"></div>
-
-		<hr />
-		<div class="spacer"></div>
-		<div class="grid grid-cols-6 gap-4 justify-items-center">
-			<div class="col-start-2 col-span-6 techstack">My Tech Stack</div>
-			<div
-				class="col-start-1 col-end-3 justify-self-end align-self-center techstack"
+			<div id="nav-mobile-section">
+				<div id="nav-link-section" class="nav-section">
+					<a href="#">ABOUT</a>
+					<a href="#">PROJECTS</a>
+				</div>
+				<div id="nav-social-section" class="nav-section">
+					<links />
+				</div>
+				<div id="nav-contact-section" class="nav-section">
+					<a href="#">GET IN TOUCH</a>
+				</div>
+			</div>
+			<button
+				id="nav-toggle-button"
+				type="button"
+				onclick="handleNavToggle()"
 			>
-				Languages
-			</div>
-			<div
-				class="col-start-3 col-end-7 flex flex-wrap justify-items-center w-full h-fit"
-			>
-				<div class="icontainer">
-					<CppIcon />
+				<span>Menu</span>
+				<font-awesome-icon
+						:icon="['fas', 'bars']"
+						inverse
+					/>
+			</button>
+		</nav>
+		<div class="main">
+			<article data-index="0" data-status="active">
+				<div class="article-image-section article-section"></div>
+				<div class="article-description-section article-section">
+					<p>
+						Neuroscientist, programmer, learner and 
+						<a
+							class="source-link"
+							href="https://www.dylanbrouwer.design/work"
+							target="_blank"
+							> peer reviewed author. </a
+						>. 
+						<a
+							class="yt-link"
+							href="https://youtu.be/nG2IyH43xMU"
+							target="_blank"
+							><i class="fa-brands fa-youtube"></i></a
+						>.
+					</p>
 				</div>
-				<div class="icontainer">
-					<CIcon />
+				<div class="article-title-section article-section">
+					<h2>Neuroscientist and Programmer</h2>
+					<font-awesome-icon
+						:icon="['fas', 'plus']"
+						inverse
+						size="2x"
+					/>
 				</div>
-				<div class="icontainer">
-					<PyIcon />
+				<div class="article-nav-section article-section">
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleLeftClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-left-long']"
+						inverse
+					/>
+					</button>
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleRightClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-right-long']"
+						inverse
+					/>
+					</button>
 				</div>
-				<div class="icontainer">
-					<JavaIcon />
+			</article>
+			<article data-index="1" data-status="inactive">
+				<div class="article-image-section article-section"></div>
+				<div class="article-description-section article-section">
+					<p>
+						Hi! I'm Flynn. I'm a Neuroscientist with a love of
+						software, programming and learning.
+					</p>
 				</div>
-			</div>
+				<div class="article-title-section article-section">
+					<h2>Some other stuff here</h2>
+					<font-awesome-icon
+						:icon="['fas', 'plus']"
+						inverse
+						size="2x"
+					/>
+				</div>
+				<div class="article-nav-section article-section">
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleLeftClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-left-long']"
+						inverse
+					/>
+					</button>
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleRightClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-right-long']"
+						inverse
+					/>
+					</button>
+				</div>
+			</article>
+			<article data-index="2" data-status="inactive">
+				<div class="article-image-section article-section"></div>
+				<div class="article-description-section article-section">
+					<p>
+						I uh love the beach?
+					</p>
+				</div>
+				<div class="article-title-section article-section">
+					<h2>C++ project goes here</h2>
+					<font-awesome-icon
+						:icon="['fas', 'plus']"
+						inverse
+						size="2x"
+					/>
+				</div>
+				<div class="article-nav-section article-section">
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleLeftClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-left-long']"
+						inverse
+				
+					/>
+					</button>
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleRightClick()"
+					>
+					<font-awesome-icon
+						:icon="['fas', 'arrow-right-long']"
+						inverse
+			
+					/>
+					</button>
+				</div>
+			</article>
+			<article data-index="3" data-status="inactive">
+				<div class="article-image-section article-section"></div>
+				<div class="article-description-section article-section">
+					<p>
+						Data Analysis Pipeline here.
+					</p>
+				</div>
+				<div class="article-title-section article-section">
+					<h2>Super Space Blob</h2>
+					<i class="fa-light fa-plus-large"></i>
+				</div>
+				<div class="article-nav-section article-section">
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleLeftClick()"
+					>
+						<i class="fa-light arrow-left-long"></i>
+					</button>
+					<button
+						class="article-nav-button"
+						type="button"
+						onclick="handleRightClick()"
+					>
+						<i class="fa-light arrow-right-long"></i>
+					</button>
+				</div>
+			</article>
 		</div>
 	</div>
 </template>
 
-<style scoped>
-.icontainer {
-	display: inline-flex;
-	min-width: 50px;
-	min-height: 50px;
-}
-.spacer {
-	height: 10vh;
+<style>
+.svg {
+	filter: brightness(0) invert(1);
 }
 
-.hello {
-	color: aqua;
-	font-family: "Original Surfer", cursive;
-	font-size: 16px;
-	line-height: 28px;
-	margin: 0 0 24px;
+.svg-hover {
+	filter: invert(41%) sepia(69%) saturate(927%) hue-rotate(227deg)
+		brightness(80%) contrast(86%);
 }
 
-.techstack {
-	color: #00704b;
-	font-family: "Lobster", cursive;
-	font-size: 36px;
-	font-weight: normal;
-	line-height: 48px;
-	text-shadow: 1px 0 0 #fff;
+.hl-hover {
+	color: var(--highlight-color);
 }
 
-.text-holder {
-	max-width: 100%;
-	background-color: #06396e;
-	border-radius: 10px;
-	box-shadow: 0px 0px 31px 8px rgba(0, 31, 63, 0.75) inset;
-	-webkit-box-shadow: 0px 0px 31px 8px rgba(0, 31, 63, 0.75) inset;
-	-moz-box-shadow: 0px 0px 31px 8px rgba(0, 31, 63, 0.75) inset;
+a:hover {
+	color: var(--highlight-color);
 }
 </style>

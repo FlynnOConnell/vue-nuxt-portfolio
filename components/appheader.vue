@@ -1,176 +1,110 @@
 <script>
 export default {
-	name: "appheader",
+	name: "appheader2",
+	methods: {
+		toGithub() {
+			const link = document.createElement("a");
+			link.href = "https://github.com/NeuroPyPy";
+			link.target = "_blank";
+			link.click();
+		},
+		toTwitter() {
+			const link = document.createElement("a");
+			link.href = "https://twitter.com/FlynnNeuro";
+			link.target = "_blank";
+			link.click();
+		},
+		toLinkedin() {
+			const link = document.createElement("a");
+			link.href = "https://www.linkedin.com/in/flynnoconnell/";
+			link.target = "_blank";
+			link.click();
+		},
+	},
 };
 </script>
 
 <template>
-		<header id="header" class="w header-fixed nav-scrolled">
-			<div class="header-limiter">
-				<a href="#" class="site-logo" aria-label="homepage">
-					<div class="image-container w flex justify-center">
+	<header>
+		<nav data-toggled="false" data-transitionable="false">
+			<div id="nav-logo-section" class="nav-section">
+				<a href="#">
+					<div class="flex justify-center align-center items-center">
 						<embed
-							class="dynamic-image w"
+							style="filter: brightness(0) invert(1);"
 							src="../static/signature_black.svg"
 						/>
 					</div>
 				</a>
-				<nav class="main-nav justify-center pt-3">
-					<ul id="dynamic-node" class="nav__list">
-						<li class="nav__list-item">
-							<a href="/" class="nav__link">
-								Home
-							</a>
-						</li>
-						<li class="nav__list-item">
-							<a href="/projects" class="nav__link">
-								Projects 
-							</a>
-						</li>
-						<li class="nav__list-item">
-							<a href="/resume" class="nav__link"> 
-								Resume 
-							</a>
-						</li>
-					</ul>
-				</nav>
 			</div>
-		</header>
-		
-	
+			<div id="nav-mobile-section">
+				<div id="nav-link-section" class="nav-section">
+					<a href="#">ABOUT</a>
+					<a href="#">PROJECTS</a>
+				</div>
+				<div id="nav-social-section" class="nav-section">
+					<links />
+				</div>
+				<div id="nav-contact-section" class="nav-section">
+					<a href="#">GET IN TOUCH</a>
+				</div>
+			</div>
+			<button
+				id="nav-toggle-button"
+				type="button"
+				onclick="handleNavToggle()"
+			>
+				<span>Menu</span>
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</nav>
+	</header>
 </template>
 
-
 <style scoped>
-.w {
-	filter: brightness(0) invert(1);
+* {
+	box-sizing: border-box;
 }
 
-.main-nav {
+nav {
 	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border-bottom: 1px solid var(--background-color);
+}
+
+nav >>> .nav-section {
+	padding: 3rem 2rem;
+	display: flex;
+	gap: 1rem;
+	border-left: 1px solid var(--background-color);
 	align-items: center;
-}
-
-.dynamic-image {
-	flex: 1;
-	height: auto;
-	width: auto;
-}
-
-.header-limiter {
-	padding-top: 5vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-header {
-	--text: #f4f4f4;
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 999;
-	display: flex;
 	justify-content: center;
-	height: 20vh;
-	padding: 2em 3em;
-	background: transparent;
-	color: var(--text);
 }
 
-.nav__list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+#nav-logo-section {
+	justify-content: flex-start;
 }
 
-.nav__link {
-	--spacing: 1em;
-	text-decoration: none;
-	color: inherit;
-	display: inline-block;
-	padding: calc(var(--spacing) / 2) var(--spacing);
-	position: relative;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 3.5vh;
+#nav-links-section > a > i {
+	font-size: 2.5rem;
 }
 
-.nav__link:after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: var(--spacing);
-	right: var(--spacing);
-	height: 2px;
-	background: currentColor;
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
-	transition: -webkit-transform 150ms ease-in-out;
-	transition: transform 150ms ease-in-out;
-	transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+#nav-links-section {
+	gap: 6rem;
 }
 
-.nav__link:hover::after {
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
+#nav-social-section {
+	gap: 3rem;
+	flex-grow: 1;
 }
 
-.nav__link--btn {
-	border: 1.5px solid currentColor;
-	border-radius: 2em;
-	margin-left: 1em;
-	transition: background 250ms ease-in-out;
-	letter-spacing: 1px;
-	padding: 0.75em 1.5em;
+#nav-logo-section,
+#nav-links-section {
+	flex-basis: calc(100% / 3);
 }
 
-.nav__link--btn:hover {
-	background: var(--text);
-	color: var(--text-inverse);
-	border-color: var(--text);
+#nav-contacts-sectioin {
+	flex-grow: 1;
 }
-
-.nav__link--btn::after {
-	display: none;
-}
-
-.nav__link--btn--highlight {
-	background: limegreen;
-	border-color: limegreen;
-	color: #333;
-}
-
-.nav__link--btn--highlight:hover {
-	background: var(--text);
-	border-color: var(--text);
-}
-
-.background-show {
-	transition: background 1000ms ease-in;
-	background-color: rgb(255, 255, 255);
-}
-
-.nav-scrolled {
-	--text: rgb(0, 0, 0);
-	--text-inverse: #f4f4f4;
-	--background: transparent;
-}
-
-.transition {
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-}
-
-.centered {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-
 </style>

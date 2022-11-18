@@ -15,7 +15,12 @@ export default {
 			{ hid: "description", name: "description", content: "" },
 			{ name: "format-detection", content: "telephone=no" },
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
+		link: [
+			{ 
+				rel: "icon", type: "image/x-icon", href: "/favicon.png" 
+			},
+
+		],
 		script: [
 			{
 				src: "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js",
@@ -122,4 +127,6 @@ export default {
 			brands: ["faGithub", "faTwitter", "faLinkedin"],
 		},
 	},
+	
 };
+

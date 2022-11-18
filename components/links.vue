@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-	<div class="links flex justify-center p-12 gap-12">
+	<div class="flex flex-row justify-around">
 		<button @click="toGithub">
 			<font-awesome-icon :icon="['fab', 'github']" inverse size="2x" />
 		</button>
